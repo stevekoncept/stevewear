@@ -3,16 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Shop all Stevewear jeans, shorts, polos and shirts." />
+    <meta
+      name="description"
+      content="Shop all Stevewear jeans, shorts, polos and shirts."
+    />
     <title>Shop — Stevewear</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="announcement">
-      <p>FREE DELIVERY ON ORDERS OVER ₦100,000</p><span>•</span><p>NEW SEASON AVAILABLE NOW</p>
+      <p>FREE DELIVERY ON ORDERS OVER ₦100,000</p>
+      <span>•</span>
+      <p>NEW SEASON AVAILABLE NOW</p>
     </div>
 
     <header class="header">
@@ -28,10 +36,17 @@
         </nav>
         <div class="nav-actions">
           <button class="nav-icon" id="searchBtn" aria-label="Search">⌕</button>
-          <button class="nav-icon cart-icon" id="cartBtn" aria-label="Shopping cart">🛒<span id="cartCount">0</span></button>
+          <button
+            class="nav-icon cart-icon"
+            id="cartBtn"
+            aria-label="Shopping cart"
+          >
+            🛒<span id="cartCount">0</span>
+          </button>
         </div>
       </div>
       <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
         <a href="index.html#new-arrivals">New Arrivals</a>
         <a href="index.html#collections">Collections</a>
@@ -43,7 +58,11 @@
       <div class="search-box">
         <button id="closeSearch" class="close-btn">×</button>
         <p class="eyebrow">SEARCH STEVEWEAR</p>
-        <input type="text" id="searchInput" placeholder="Search jeans, polos, shirts..." />
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search jeans, polos, shirts..."
+        />
         <div id="searchResults"></div>
       </div>
     </div>
@@ -57,7 +76,11 @@
       <section class="section">
         <div class="shop-controls">
           <div class="shop-filter-group">
-            <select id="shopCategory" class="shop-filter" aria-label="Filter products by category">
+            <select
+              id="shopCategory"
+              class="shop-filter"
+              aria-label="Filter products by category"
+            >
               <option value="all">ALL PRODUCTS</option>
               <option value="jeans">JEANS</option>
               <option value="shorts">SHORTS</option>
@@ -83,19 +106,42 @@
           <a href="index.html" class="logo">STEVE<span>WEAR</span></a>
           <p>Modern everyday clothing. Designed in Nigeria.</p>
         </div>
-        <div><h4>SHOP</h4><a href="shop.html?category=jeans">Jeans</a><a href="shop.html?category=shorts">Shorts</a><a href="shop.html?category=polos">Polos</a><a href="shop.html?category=shirts">Shirts</a></div>
-        <div><h4>HELP</h4><a href="#">Contact</a><a href="#">Delivery</a><a href="#">Returns</a><a href="#">Size Guide</a></div>
-        <div><h4>FOLLOW</h4><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">X</a></div>
+        <div>
+          <h4>SHOP</h4>
+          <a href="shop.html?category=jeans">Jeans</a
+          ><a href="shop.html?category=shorts">Shorts</a
+          ><a href="shop.html?category=polos">Polos</a
+          ><a href="shop.html?category=shirts">Shirts</a>
+        </div>
+        <div>
+          <h4>HELP</h4>
+          <a href="#">Contact</a><a href="#">Delivery</a><a href="#">Returns</a
+          ><a href="#">Size Guide</a>
+        </div>
+        <div>
+          <h4>FOLLOW</h4>
+          <a href="#">Instagram</a><a href="#">TikTok</a><a href="#">X</a>
+        </div>
       </div>
-      <div class="footer-bottom"><p>© 2026 Stevewear. All rights reserved.</p><p>Awka, Nigeria</p></div>
+      <div class="footer-bottom">
+        <p>© 2026 Stevewear. All rights reserved.</p>
+        <p>Awka, Nigeria</p>
+      </div>
     </footer>
 
     <div class="cart-overlay" id="cartOverlay"></div>
     <aside class="cart-drawer" id="cartDrawer">
-      <div class="cart-header"><h2>YOUR CART</h2><button id="closeCart" class="close-btn">×</button></div>
-      <div class="cart-items" id="cartItems"><p class="empty-cart">Your cart is empty.</p></div>
+      <div class="cart-header">
+        <h2>YOUR CART</h2>
+        <button id="closeCart" class="close-btn">×</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart">Your cart is empty.</p>
+      </div>
       <div class="cart-footer">
-        <div class="cart-total"><span>TOTAL</span><strong id="cartTotal">₦0</strong></div>
+        <div class="cart-total">
+          <span>TOTAL</span><strong id="cartTotal">₦0</strong>
+        </div>
         <button class="btn btn-primary checkout-btn">CHECKOUT</button>
         <p>Taxes and delivery calculated at checkout.</p>
       </div>
