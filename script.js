@@ -158,7 +158,7 @@ function renderProducts(list, container) {
 
 // Homepage shows the first four products.
 renderProducts(
-  allProducts.slice(0, 8),
+  allProducts.slice(0, 6),
   document.getElementById("products")
 );
 
