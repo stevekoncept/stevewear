@@ -536,7 +536,7 @@ h2 {
 .product-image {
   position: relative;
 
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3/2;
 
   background: var(--surface-alt);
 
@@ -1485,7 +1485,6 @@ h2 {
   .product-grid {
     grid-template-columns: 1fr;
   }
-
 }
 
 /* =========================================

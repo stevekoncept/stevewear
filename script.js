@@ -13,7 +13,8 @@ const products = {
       description: "Mid Blue / Straight Fit",
       image:
         "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85",
-      badge: "NEW",
+      badge: "BESTSELLER",
+      badgeDark: true,
     },
     {
       id: "jeans-002",
@@ -24,7 +25,7 @@ const products = {
       description: "Washed Black / Loose Fit",
       image:
         "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=85",
-      badge: "",
+      badge: "NEW",
     },
   ],
 
@@ -63,8 +64,7 @@ const products = {
       description: "Black / Regular Fit",
       image:
         "https://images.unsplash.com/photo-1671438118097-479e63198629?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8UG9sb3xlbnwwfHwwfHx8MA%3D%3D",
-      badge: "BESTSELLER",
-      badgeDark: true,
+      badge: "",
     },
     {
       id: "polos-002",
@@ -157,10 +157,7 @@ function renderProducts(list, container) {
 // =========================================
 
 // Homepage shows the first four products.
-renderProducts(
-  allProducts.slice(0, 6),
-  document.getElementById("products")
-);
+renderProducts(allProducts.slice(0, 6), document.getElementById("products"));
 
 // =========================================
 // SHOP PAGE
@@ -177,9 +174,7 @@ function renderShopProducts() {
   const sort = shopSort?.value || "default";
 
   let list =
-    category === "all"
-      ? [...allProducts]
-      : [...(products[category] || [])];
+    category === "all" ? [...allProducts] : [...(products[category] || [])];
 
   if (sort === "price-low") {
     list.sort((a, b) => a.price - b.price);
@@ -248,7 +243,7 @@ function showSearchResults(query) {
   const matches = allProducts.filter(
     (product) =>
       product.name.toLowerCase().includes(query) ||
-      product.category.includes(query)
+      product.category.includes(query),
   );
 
   if (!matches.length) {
@@ -269,7 +264,7 @@ function showSearchResults(query) {
           <span>${product.name}</span>
           <strong>${formatPrice(product.price)}</strong>
         </a>
-      `
+      `,
     )
     .join("");
 }
@@ -337,15 +332,11 @@ cartOverlay?.addEventListener("click", closeCartDrawer);
 // =========================================
 
 function addToCart(productId) {
-  const product = allProducts.find(
-    (item) => item.id === productId
-  );
+  const product = allProducts.find((item) => item.id === productId);
 
   if (!product) return;
 
-  const existingItem = cart.find(
-    (item) => item.id === productId
-  );
+  const existingItem = cart.find((item) => item.id === productId);
 
   if (existingItem) {
     existingItem.quantity += 1;
@@ -375,13 +366,11 @@ document.addEventListener("click", (event) => {
     addToCart(addButton.dataset.productId);
   }
 
-  const quantityButton =
-    event.target.closest(".quantity-btn");
+  const quantityButton = event.target.closest(".quantity-btn");
 
   if (quantityButton) {
     const item = cart.find(
-      (cartItem) =>
-        cartItem.id === quantityButton.dataset.id
+      (cartItem) => cartItem.id === quantityButton.dataset.id,
     );
 
     if (!item) return;
@@ -395,22 +384,17 @@ document.addEventListener("click", (event) => {
     }
 
     if (item.quantity <= 0) {
-      cart = cart.filter(
-        (cartItem) => cartItem.id !== item.id
-      );
+      cart = cart.filter((cartItem) => cartItem.id !== item.id);
     }
 
     saveCart();
     updateCart();
   }
 
-  const removeButton =
-    event.target.closest(".remove-item");
+  const removeButton = event.target.closest(".remove-item");
 
   if (removeButton) {
-    cart = cart.filter(
-      (item) => item.id !== removeButton.dataset.id
-    );
+    cart = cart.filter((item) => item.id !== removeButton.dataset.id);
 
     saveCart();
     updateCart();
@@ -424,15 +408,9 @@ document.addEventListener("click", (event) => {
 function updateCart() {
   if (!cartItems || !cartCount || !cartTotal) return;
 
-  const itemCount = cart.reduce(
-    (sum, item) => sum + item.quantity,
-    0
-  );
+  const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-  const total = cart.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   cartCount.textContent = itemCount;
   cartTotal.textContent = formatPrice(total);
@@ -492,7 +470,7 @@ function updateCart() {
             REMOVE
           </button>
         </div>
-      `
+      `,
     )
     .join("");
 }
@@ -503,8 +481,7 @@ updateCart();
 // NEWSLETTER
 // =========================================
 
-const newsletterForm =
-  document.getElementById("newsletterForm");
+const newsletterForm = document.getElementById("newsletterForm");
 
 newsletterForm?.addEventListener("submit", (event) => {
   event.preventDefault();
