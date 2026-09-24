@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Stevewear — modern everyday clothing. Shop jeans, shorts, polos and shirts."
+    />
+
+    <title>Stevewear — Everyday, Better</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+       ANNOUNCEMENT BAR
+  ========================== -->
+
+    <div class="announcement">
+      <p>FREE DELIVERY ON ORDERS OVER ₦100,000</p>
+      <span>•</span>
+      <p>NEW SEASON AVAILABLE NOW</p>
+    </div>
+
+    <!-- =========================
+       HEADER
+  ========================== -->
+
+    <header class="header">
+      <div class="container nav">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+        <a href="#" class="logo"> STEVE<span>WEAR</span> </a>
+
+        <nav class="desktop-nav">
+          <a href="#shop">Shop</a>
+
+          <a href="#new-arrivals"> New Arrivals </a>
+
+          <a href="#collections"> Collections </a>
+
+          <a href="#about"> About </a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="nav-icon" id="searchBtn" aria-label="Search">⌕</button>
+
+          <button
+            class="nav-icon cart-icon"
+            id="cartBtn"
+            aria-label="Shopping cart"
+          >
+            🛒
+
+            <span id="cartCount"> 0 </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile navigation -->
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#shop">Shop</a>
+
+        <a href="#new-arrivals"> New Arrivals </a>
+
+        <a href="#collections"> Collections </a>
+
+        <a href="#about"> About </a>
+      </div>
+    </header>
+
+    <!-- =========================
+       SEARCH OVERLAY
+  ========================== -->
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-box">
+        <button id="closeSearch" class="close-btn">×</button>
+
+        <p class="eyebrow">SEARCH STEVEWEAR</p>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search jeans, polos, shirts..."
+        />
+
+        <div id="searchResults"></div>
+      </div>
+    </div>
+
+    <!-- =========================
+       HERO
+  ========================== -->
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">STEVEWEAR / SEASON 01</p>
+
+          <h1>
+            BUILT FOR
+            <span>EVERYDAY.</span>
+          </h1>
+
+          <p class="hero-description">
+            Clean fits. Reliable essentials. Clothing designed to move with you
+            from weekday to weekend.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#shop" class="btn btn-primary"> SHOP THE DROP </a>
+
+            <a href="#collections" class="btn btn-dark"> VIEW COLLECTIONS </a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1400&q=85"
+            alt="Stevewear clothing"
+          />
+
+          <div class="hero-label">
+            EST. 2026
+            <strong>Awka, NG</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         CATEGORY STRIP
+    ========================== -->
+
+      <section class="category-strip" id="shop">
+        <a href="#products">
+          JEANS
+          <span>→</span>
+        </a>
+
+        <a href="#products">
+          SHORTS
+          <span>→</span>
+        </a>
+
+        <a href="#products">
+          POLOS
+          <span>→</span>
+        </a>
+
+        <a href="#products">
+          SHIRTS
+          <span>→</span>
+        </a>
+      </section>
+
+      <!-- =========================
+         NEW ARRIVALS
+    ========================== -->
+
+      <section class="section" id="new-arrivals">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">THE LATEST</p>
+
+            <h2>NEW ARRIVALS</h2>
+          </div>
+
+          <a href="#products" class="text-link"> VIEW ALL → </a>
+        </div>
+
+        <div class="product-grid" id="products">
+          <!-- Product 1 -->
+
+          <article
+            class="product-card"
+            data-name="Classic Straight Jean"
+            data-category="jeans"
+            data-price="48000"
+          >
+            <div class="product-image">
+              <span class="product-badge"> NEW </span>
+
+              <img
+                src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85"
+                alt="Classic Straight Jean"
+              />
+
+              <button class="quick-add" data-product="Classic Straight Jean">
+                ADD TO CART
+              </button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>Classic Straight Jean</h3>
+
+                <p>Mid Blue / Straight Fit</p>
+              </div>
+
+              <strong> ₦48,000 </strong>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+
+          <article
+            class="product-card"
+            data-name="Relaxed Cargo Short"
+            data-category="shorts"
+            data-price="32000"
+          >
+            <div class="product-image">
+              <span class="product-badge"> NEW </span>
+
+              <img
+                src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=900&q=85"
+                alt="Relaxed Cargo Short"
+              />
+
+              <button class="quick-add" data-product="Relaxed Cargo Short">
+                ADD TO CART
+              </button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>Relaxed Cargo Short</h3>
+
+                <p>Stone / Relaxed Fit</p>
+              </div>
+
+              <strong> ₦32,000 </strong>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+
+          <article
+            class="product-card"
+            data-name="Essential Polo"
+            data-category="polos"
+            data-price="28000"
+          >
+            <div class="product-image">
+              <span class="product-badge dark"> BESTSELLER </span>
+
+              <img
+                src="https://images.unsplash.com/photo-1671438118097-479e63198629?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8UG9sb3xlbnwwfHwwfHx8MA%3D%3D"
+                alt="Essential Polo"
+              />
+
+              <button class="quick-add" data-product="Essential Polo">
+                ADD TO CART
+              </button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>Essential Polo</h3>
+
+                <p>Black / Regular Fit</p>
+              </div>
+
+              <strong> ₦28,000 </strong>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+
+          <article
+            class="product-card"
+            data-name="Oxford Everyday Shirt"
+            data-category="shirts"
+            data-price="35000"
+          >
+            <div class="product-image">
+              <span class="product-badge"> NEW </span>
+
+              <img
+                src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=900&q=85"
+                alt="Oxford Everyday Shirt"
+              />
+
+              <button class="quick-add" data-product="Oxford Everyday Shirt">
+                ADD TO CART
+              </button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>Oxford Everyday Shirt</h3>
+
+                <p>White / Relaxed Fit</p>
+              </div>
+
+              <strong> ₦35,000 </strong>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+
+          <article
+            class="product-card"
+            data-name="Washed Denim Jean"
+            data-category="jeans"
+            data-price="52000"
+          >
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=85"
+                alt="Washed Denim Jean"
+              />
+
+              <button class="quick-add" data-product="Washed Denim Jean">
+                ADD TO CART
+              </button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>Washed Denim Jean</h3>
+
+                <p>Washed Black / Loose Fit</p>
+              </div>
+
+              <strong> ₦52,000 </strong>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+
+          <article
+            class="product-card"
+            data-name="Daily Fit Polo"
+            data-category="polos"
+            data-price="30,000"
+          >
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1625910513413-c23b8bb81cba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UG9sb3xlbnwwfHwwfHx8MA%3D%3D"
+                alt="Daily Fit Polo"
+              />
+
+              <button class="quick-add" data-product="Daily Fit Polo">
+                ADD TO CART
+              </button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>Daily Fit Polo</h3>
+
+                <p>Cream / Regular Fit</p>
+              </div>
+
+              <strong> ₦30,000 </strong>
+            </div>
+          </article>
+
+          <!-- Product 7 -->
+
+          <article
+            class="product-card"
+            data-name="Weekend Denim Short"
+            data-category="shorts"
+            data-price="29000"
+          >
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1598522325074-042db73aa4e6?auto=format&fit=crop&w=900&q=85"
+                alt="Weekend Denim Short"
+              />
+
+              <button class="quick-add" data-product="Weekend Denim Short">
+                ADD TO CART
+              </button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>Weekend Denim Short</h3>
+
+                <p>Blue Wash / Relaxed</p>
+              </div>
+
+              <strong> ₦29,000 </strong>
+            </div>
+          </article>
+
+          <!-- Product 8 -->
+
+          <article
+            class="product-card"
+            data-name="Premium Casual Shirt"
+            data-category="shirts"
+            data-price="39000"
+          >
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=900&q=85"
+                alt="Premium Casual Shirt"
+              />
+
+              <button class="quick-add" data-product="Premium Casual Shirt">
+                ADD TO CART
+              </button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>Premium Casual Shirt</h3>
+
+                <p>Navy / Oversized Fit</p>
+              </div>
+
+              <strong> ₦39,000 </strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+         BLACK PROMO SECTION
+    ========================== -->
+
+      <section class="statement">
+        <div>
+          <p class="eyebrow">STEVEWEAR STANDARD</p>
+
+          <h2>
+            LESS NOISE.
+            <br />
+            MORE STYLE.
+          </h2>
+        </div>
+
+        <p>
+          Everyday pieces designed around fit, comfort and simplicity. No
+          unnecessary details. Just clothes that work.
+        </p>
+      </section>
+
+      <!-- =========================
+         COLLECTIONS
+    ========================== -->
+
+      <section class="section" id="collections">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">SHOP BY CATEGORY</p>
+
+            <h2>THE COLLECTIONS</h2>
+          </div>
+        </div>
+
+        <div class="collection-grid">
+          <a href="#products" class="collection-card">
+            <img
+              src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1000&q=85"
+              alt="Jeans"
+            />
+
+            <div>
+              <p>01</p>
+              <h3>JEANS</h3>
+              <span>SHOP NOW →</span>
+            </div>
+          </a>
+
+          <a href="#products" class="collection-card">
+            <img
+              src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=1000&q=85"
+              alt="Shorts"
+            />
+
+            <div>
+              <p>02</p>
+              <h3>SHORTS</h3>
+              <span>SHOP NOW →</span>
+            </div>
+          </a>
+
+          <a href="#products" class="collection-card">
+            <img
+              src="https://images.unsplash.com/photo-1625910513413-c23b8bb81cba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UG9sb3xlbnwwfHwwfHx8MA%3D%3D"
+              alt="Polos"
+            />
+
+            <div>
+              <p>03</p>
+              <h3>POLOS</h3>
+              <span>SHOP NOW →</span>
+            </div>
+          </a>
+
+          <a href="#products" class="collection-card">
+            <img
+              src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=1000&q=85"
+              alt="Shirts"
+            />
+
+            <div>
+              <p>04</p>
+              <h3>SHIRTS</h3>
+              <span>SHOP NOW →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- =========================
+         ABOUT
+    ========================== -->
+
+      <section class="about" id="about">
+        <div class="about-content">
+          <p class="eyebrow">ABOUT STEVEWEAR</p>
+
+          <h2>
+            CLOTHES FOR
+            <span>REAL LIFE.</span>
+          </h2>
+
+          <p>
+            Stevewear is an independent clothing brand focused on creating
+            versatile everyday pieces with a clean, modern attitude.
+          </p>
+
+          <p>
+            From denim you can wear all week to polos and shirts that work
+            almost anywhere, every piece is designed to become part of your
+            everyday rotation.
+          </p>
+
+          <a href="#" class="btn btn-primary"> OUR STORY </a>
+        </div>
+
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85"
+            alt="Stevewear lifestyle"
+          />
+        </div>
+      </section>
+
+      <!-- =========================
+         REVIEWS
+    ========================== -->
+
+      <section class="section reviews-section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">CUSTOMER FEEDBACK</p>
+
+            <h2>WHAT THEY SAY</h2>
+          </div>
+        </div>
+
+        <div class="review-grid">
+          <article class="review">
+            <div class="stars">★★★★★</div>
+
+            <p>
+              “The jeans fit exactly how I wanted. The quality is really good
+              for the price.”
+            </p>
+
+            <strong> Daniel A. </strong>
+
+            <span> Awka </span>
+          </article>
+
+          <article class="review">
+            <div class="stars">★★★★★</div>
+
+            <p>
+              “Bought two polos and ended up coming back for another one. Very
+              clean fit.”
+            </p>
+
+            <strong> Michael O. </strong>
+
+            <span> Abuja </span>
+          </article>
+
+          <article class="review">
+            <div class="stars">★★★★★</div>
+
+            <p>
+              “Simple website, easy ordering and the shirt looks even better in
+              person.”
+            </p>
+
+            <strong> Chinedu K. </strong>
+
+            <span> Port Harcourt </span>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+         NEWSLETTER
+    ========================== -->
+
+      <section class="newsletter">
+        <div>
+          <p class="eyebrow">STAY IN THE LOOP</p>
+
+          <h2>GET THE NEXT DROP</h2>
+
+          <p>
+            New arrivals, limited releases and occasional offers. Straight to
+            your inbox.
+          </p>
+        </div>
+
+        <form id="newsletterForm">
+          <input type="email" placeholder="Your email address" required />
+
+          <button type="submit" class="btn btn-primary newsletter_btn">SIGN ME UP</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- =========================
+       FOOTER
+  ========================== -->
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo"> STEVE<span>WEAR</span> </a>
+
+          <p>Modern everyday clothing. Designed in Nigeria.</p>
+        </div>
+
+        <div>
+          <h4>SHOP</h4>
+
+          <a href="#products"> Jeans </a>
+
+          <a href="#products"> Shorts </a>
+
+          <a href="#products"> Polos </a>
+
+          <a href="#products"> Shirts </a>
+        </div>
+
+        <div>
+          <h4>HELP</h4>
+
+          <a href="#"> Contact </a>
+
+          <a href="#"> Delivery </a>
+
+          <a href="#"> Returns </a>
+
+          <a href="#"> Size Guide </a>
+        </div>
+
+        <div>
+          <h4>FOLLOW</h4>
+
+          <a href="#"> Instagram </a>
+
+          <a href="#"> TikTok </a>
+
+          <a href="#"> X </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Stevewear. All rights reserved.</p>
+
+        <p>Awka, Nigeria</p>
+      </div>
+    </footer>
+
+    <!-- =========================
+       CART DRAWER
+  ========================== -->
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <h2>YOUR CART</h2>
+
+        <button id="closeCart" class="close-btn">×</button>
+      </div>
+
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart">Your cart is empty.</p>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span> TOTAL </span>
+
+          <strong id="cartTotal"> ₦0 </strong>
+        </div>
+
+        <button class="btn btn-primary checkout-btn">CHECKOUT</button>
+
+        <p>Taxes and delivery calculated at checkout.</p>
+      </div>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
